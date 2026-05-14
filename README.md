@@ -20,8 +20,8 @@ A modified POPS backend for generating YOLOv5m training data from video footage.
 
 | Parameter | Description |
 |---|---|
-| `--sample-every n` | Sample one frame every `n` frames | (default: 'n = 5')
-| `--conf-thresh x` | Minimum confidence score `x` required to generate a bounding box and label (default: 'x = 0.75') |
+| `--sample-every n` | Sample one frame every `n` frames | (default: `n = 5`)
+| `--conf-thresh x` | Minimum confidence score `x` required to generate a bounding box and label (default: `x = 0.75`) |
 | `--data-folder z` | Path to the video folder (default: `sample_videos/`) |
 
 **Example:**
