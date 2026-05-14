@@ -1,14 +1,30 @@
-# YoloV5m-cart-data-generator
-Modification of POPS backend to generate training data for the yolov5m model. 
+# YOLOv5m Cart Data Generator
 
-## Instructions
-1. Set up local venv with setup_venv.ps1 (powershell script) It will take a few minutes.
-2. Make sure you have a video folder for videos that will become data. (Default of script is to look for a **sample_videos** folder)
-3. Activate the venv and run python prepare_yolo_dataset.py
+A modified POPS backend for generating YOLOv5m training data from video footage.
+
+## Setup
+
+1. Run the PowerShell setup script to create a local virtual environment (allow a few minutes to complete):
+   ```powershell
+   ./setup_venv.ps1
+   ```
+
+2. Prepare a folder containing the videos you want to use as source data. The script looks for a `sample_videos` folder by default.
+
+3. Activate the virtual environment and run the script:
+   ```bash
+   python prepare_yolo_dataset.py
+   ```
 
 ## Parameters
-a. --sample-every n (n = how many frames)
 
-b. --conf-thresh x (x = how high a threshold to generate a bounding box and label)
+| Parameter | Description |
+|---|---|
+| `--sample-every n` | Sample one frame every `n` frames |
+| `--conf-thresh x` | Minimum confidence score `x` required to generate a bounding box and label |
+| `--data-folder z` | Path to the video folder (default: `sample_videos/`) |
 
-c. --data-folder z (z = path/to/videos/)
+**Example:**
+```bash
+python prepare_yolo_dataset.py --sample-every 10 --conf-thresh 0.5 --data-folder path/to/videos/
+```
