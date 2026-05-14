@@ -7,4 +7,6 @@ Modification of POPS backend to generate training data for the yolov5m model.
 3. Activate the venv and run python prepare_yolo_dataset.py
 
 ## Parameters
-
+a. --sample-every n (n = how many frames)
+b. --conf-thresh x (x = how high a threshold to generate a bounding box and label)
+c. --data-folder z (z = path/to/videos/)
