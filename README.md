@@ -8,5 +8,7 @@ Modification of POPS backend to generate training data for the yolov5m model.
 
 ## Parameters
 a. --sample-every n (n = how many frames)
+
 b. --conf-thresh x (x = how high a threshold to generate a bounding box and label)
+
 c. --data-folder z (z = path/to/videos/)
